@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyNewLogger", "MyNewLogger\MyNewLogger.csproj", "{306B76EB-2DBF-4596-8367-F89D41EB97AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewCalc", "NewCalc\NewCalc.csproj", "{44889012-07C7-4BBD-9CBB-98FC69466CF5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{306B76EB-2DBF-4596-8367-F89D41EB97AB} = {306B76EB-2DBF-4596-8367-F89D41EB97AB}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{306B76EB-2DBF-4596-8367-F89D41EB97AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{306B76EB-2DBF-4596-8367-F89D41EB97AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{306B76EB-2DBF-4596-8367-F89D41EB97AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{306B76EB-2DBF-4596-8367-F89D41EB97AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44889012-07C7-4BBD-9CBB-98FC69466CF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44889012-07C7-4BBD-9CBB-98FC69466CF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44889012-07C7-4BBD-9CBB-98FC69466CF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44889012-07C7-4BBD-9CBB-98FC69466CF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {79010F96-4892-4EF5-BF3B-78B65F61F6DF}
+	EndGlobalSection
+EndGlobal
