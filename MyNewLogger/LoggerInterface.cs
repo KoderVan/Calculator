@@ -27,10 +27,15 @@ namespace MyNewLogger
 
     public class FileLogger : ILogger
     {
+        private readonly string _filename;
+        public FileLogger(string filename)
+        {
+            _filename = filename; 
+        }
         
         public void LogInformation(string message)
         {
-            using (var sw = new StreamWriter("log.txt"))
+            using (var sw = new StreamWriter(_filename))
             {
                 sw.WriteLine($"LogInformation: {message}");
             }  
@@ -46,18 +51,17 @@ namespace MyNewLogger
                     sw.WriteLine(additionalMessage);
                 }
             }
-                
         }   
     }
 
     public class CompositeLogger : ILogger
     {
-        private readonly ILogger _ConsoleLogger;
-        private readonly ILogger _FileLogger;
+        private readonly ILogger _consoleLogger;
+        private readonly ILogger _fileLogger;
         public CompositeLogger(ILogger ConsoleLogger, ILogger FileLogger)
         {
-            _ConsoleLogger = ConsoleLogger;
-            _FileLogger = FileLogger;
+            _consoleLogger = ConsoleLogger;
+            _fileLogger = FileLogger;
         }
 
         public void LogError(Exception exeption, string? additionalMessage = null)
